@@ -2,6 +2,62 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'SUIT';
+  src: url(../../public/assets/font/SUIT-SemiBold.ttf) format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SUIT';
+  src: url(../../public/assets/font/SUIT-Heavy.ttf) format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@layer components {
+  .t1 {
+    @apply font-suit text-48 font-heavy leading-120;
+  }
+
+  .t2 {
+    @apply font-suit text-40 font-heavy leading-120;
+  }
+
+  .h1h {
+    @apply font-suit text-32 font-heavy leading-120;
+  }
+
+  .h1s {
+    @apply font-suit text-32 font-semibold leading-120;
+  }
+
+  .h2h {
+    @apply font-suit text-28 font-heavy leading-120;
+  }
+
+  .h2s {
+    @apply font-suit text-28 font-semibold leading-120;
+  }
+
+  .p1h {
+    @apply font-suit text-24 font-heavy leading-120;
+  }
+
+  .p1s {
+    @apply font-suit text-24 font-semibold leading-120;
+  }
+
+  .p2h {
+    @apply font-suit text-20 font-heavy leading-120;
+  }
+
+  .p2s {
+    @apply font-suit text-20 font-semibold leading-120;
+  }
+}
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
