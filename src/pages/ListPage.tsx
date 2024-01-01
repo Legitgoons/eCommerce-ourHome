@@ -1,3 +1,5 @@
+import ListTemplate from '@/components/templates/ListTemplate';
+
 export default function ListPage() {
-  return <div>상품 리스트 페이지입니다.</div>;
+  return <ListTemplate />;
 }
