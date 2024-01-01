@@ -1,0 +1,1 @@
+export type currentPage = 'list' | 'cart';
