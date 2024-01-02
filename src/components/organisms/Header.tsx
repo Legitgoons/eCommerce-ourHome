@@ -13,10 +13,10 @@ interface HeaderProps {
 export default function Header({ currentPage }: HeaderProps) {
   return (
     <header className="w-full h-16 md:h-28 flex justify-between border-b-2">
-      <HeaderIcon>
+      <HeaderIcon styles="mx-6 md:mx-12">
         <Logo />
       </HeaderIcon>
-      <HeaderIcon>
+      <HeaderIcon styles="mx-6 md:mx-12">
         {currentPage === 'list' && (
           <Link to="/cart">
             <Cart />

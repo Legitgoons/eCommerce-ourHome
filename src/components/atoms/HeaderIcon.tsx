@@ -2,12 +2,11 @@ import { ReactNode } from 'react';
 
 interface HeaderIconProps {
   children: ReactNode;
+  styles?: string;
 }
 
-export default function HeaderIcon({ children }: HeaderIconProps) {
+export default function HeaderIcon({ children, styles }: HeaderIconProps) {
   return (
-    <div className="w-12 mx-6 md:w-20 md:mx-12 flex items-center">
-      {children}
-    </div>
+    <div className={`${styles} w-12 md:w-20 flex items-center`}>{children}</div>
   );
 }
