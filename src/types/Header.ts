@@ -1,1 +1,1 @@
-export type currentPage = 'list' | 'cart';
+export type CurrentPage = 'list' | 'cart';

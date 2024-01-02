@@ -1,4 +1,4 @@
-import { currentPage } from '@/types/Header';
+import { CurrentPage } from '@/types/Header';
 import Cart from '@public/assets/image/cart.svg?react';
 import Logo from '@public/assets/image/logo.svg?react';
 import Shop from '@public/assets/image/shop.svg?react';
@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 import HeaderIcon from '../atoms/HeaderIcon';
 
 interface HeaderProps {
-  currentPage: currentPage;
+  currentPage: CurrentPage;
 }
 
 export default function Header({ currentPage }: HeaderProps) {
