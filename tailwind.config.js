@@ -3,6 +3,9 @@ export default {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
+      height: {
+        500: '500px',
+      },
       colors: {
         Primary: '#545F71',
         Secondary: '#9BA5B7',
@@ -16,12 +19,13 @@ export default {
         suit: ['SUIT', 'sans-serif'],
       },
       fontSize: {
-        20: '20px',
-        24: '24px',
-        28: '28px',
-        32: '32px',
-        40: '40px',
-        48: '48px',
+        12: '0.75rem',
+        16: '1rem',
+        20: '1.25rem',
+        24: '1.5rem',
+        28: '1.75rem',
+        32: '2rem',
+        40: '2.5rem',
       },
       lineHeight: {
         120: '120%',
