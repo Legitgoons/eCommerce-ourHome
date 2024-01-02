@@ -1,0 +1,83 @@
+[
+  {
+    "id": 1,
+    "imgSrc": "https://mall.ourhome.co.kr//attach_file/20230102/46F635C6C78A42EA8290B235FDA4D829.jpg",
+    "name": "아워홈 치킨스테이크 오리지널 920g(4인분)",
+    "detail": "겉바속촉 통닭사리살 오븐구이 치킨스테이크",
+    "tag": "best",
+    "price": 17000,
+    "originalPrice": 17900,
+    "discountRate": 5,
+    "temp": "freeze"
+  },
+  {
+    "id": 2,
+    "imgSrc": "https://mall.ourhome.co.kr//attach_file/20230809/B22F8C84573E46B0B215CB68E7BA106F.jpg",
+    "name": "[온더고] 통모짜 로제 떡볶이 with 파스타 320g",
+    "detail": "치즈 듬뿍, 떡볶이, 로제 소스, 생크림, 퓨전한식",
+    "price": 5980,
+    "temp": "freeze"
+  },
+  {
+    "id": 3,
+    "imgSrc": "https://mall.ourhome.co.kr//attach_file/20210917/B4255A1E0FE5437D8E57C219B6248FE4.jpg",
+    "name": "진한 추어탕 400g",
+    "detail": "직접 선별한 국내산 재료로 더 맛있는",
+    "price": 4790,
+    "originalPrice": 5300,
+    "discountRate": 10,
+    "temp": "normal"
+  },
+  {
+    "id": 4,
+    "imgSrc": "https://mall.ourhome.co.kr//attach_file/20231226/B4CCDFBCFB884CB0A96E45AEA6EBAD40.jpg",
+    "name": "[구씨반가] 전복 소갈비탕 600g",
+    "detail": "진주명문가 구씨가문의 전통을 담은 전복 소갈비탕",
+    "tag": "new",
+    "price": 9580,
+    "originalPrice": 11980,
+    "discountRate": 20,
+    "temp": "cold"
+  },
+  {
+    "id": 5,
+    "imgSrc": "https://mall.ourhome.co.kr//attach_file/20201118/C4A1610E7468407FA935CBF8DE2164DF.jpg",
+    "name": "진한 사골곰탕 300g",
+    "detail": "100% 사골로 고은 진한 사골곰탕",
+    "price": 1590,
+    "originalPrice": 1750,
+    "discountRate": 10,
+    "temp": "normal"
+  },
+  {
+    "id": 6,
+    "imgSrc": "https://mall.ourhome.co.kr//attach_file/20220930/ECF4934776D942C3B3296F2BFD61E3CF.jpg",
+    "name": "소불고기볶음밥 230g",
+    "detail": "치즈 듬뿍, 떡볶이, 로제 소스, 생크림, 퓨전한식",
+    "price": 1960,
+    "originalPrice": 2070,
+    "discountRate": 5,
+    "temp": "freeze"
+  },
+  {
+    "id": 7,
+    "imgSrc": "https://mall.ourhome.co.kr//attach_file/20231117/E889FD2862A44D999650DCDC5B164475.jpg",
+    "name": "담백한 소고기 미역국 300g",
+    "detail": "완도산 미역과 수비드 소고기로 만든",
+    "price": 2500,
+    "originalPrice": 2620,
+    "discountRate": 5,
+    "temp": "normal"
+  },
+  {
+    "id": 8,
+    "imgSrc": "https://mall.ourhome.co.kr//attach_file/20210517/43497B534BE247B1BA9B5AEC2524B966.jpg",
+    "name": "치킨데리야끼볶음밥 250g",
+    "detail": "단짠단짠, 닭가슴살, 간편조리",
+    "tag": "best",
+    "price": 1800,
+    "originalPrice": 1890,
+    "discountRate": 5,
+    "temp": "cold"
+  }
+]
