@@ -1,7 +1,9 @@
 import { ReactNode } from 'react';
 
+type CardTagBgColor = 'bg-Red' | 'bg-Orange';
+
 interface ListCardTagProps {
-  bgColor: string;
+  bgColor: CardTagBgColor;
   children: ReactNode;
 }
 
