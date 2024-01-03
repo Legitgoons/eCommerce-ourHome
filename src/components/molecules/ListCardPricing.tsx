@@ -13,7 +13,7 @@ export default function ListCardPrice({
     <div className="flex items-end gap-x-1">
       <strong className="h1h">{price.toLocaleString()}원</strong>
       {orginalPrice && (
-        <s className="p1h text-Primary">{orginalPrice.toLocaleString()}원</s>
+        <s className="p1h text-Secondary">{orginalPrice.toLocaleString()}원</s>
       )}
       {discountRate && <p className="p1h text-Orange">{discountRate}%</p>}
     </div>
