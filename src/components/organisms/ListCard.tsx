@@ -1,7 +1,9 @@
+import { useCartDispatch } from '@/contexts/cartContext';
 import { ListCardData } from '@/types/apis/listData';
+import { CartItem } from '@/types/cart';
 import Cart from '@public/assets/image/cart.svg?react';
 
-import FoodImage from '../atoms/FoodImage';
+import FoodImageBox from '../atoms/FoodImageBox';
 import ListCardTag from '../atoms/ListCardTag';
 import ListCardPricing from '../molecules/ListCardPricing';
 
@@ -20,10 +22,27 @@ export default function ListCard({ data }: ListCardProps) {
     discountRate,
     temp,
   } = data;
+  const addToCart = useCartDispatch();
+
+  const convertToCartItem = (data: ListCardData): CartItem => {
+    return {
+      imgSrc: data.imgSrc,
+      name: data.name,
+      price: data.price,
+      originalPrice: data.originalPrice || undefined,
+      quantity: 1,
+    };
+  };
+
+  const cartHandler = (data: ListCardData) => {
+    window.alert(`장바구니에 ${name}이 담겼습니다.`);
+    const cartItem = convertToCartItem(data);
+    addToCart({ type: 'ADD_TO_CART', item: cartItem });
+  };
 
   return (
     <article className="w-72 flex flex-col gap-y-1">
-      <FoodImage src={imgSrc} />
+      <FoodImageBox src={imgSrc} name={name} />
       <div className="flex items-start">
         <div className="w-5/6 flex flex-col gap-y-2 items-start text-start">
           {tag === 'best' && <ListCardTag bgColor="bg-Red">베스트</ListCardTag>}
@@ -41,7 +60,7 @@ export default function ListCard({ data }: ListCardProps) {
           {temp === 'freeze' && <p className="p2h text-Darkblue">냉동</p>}
           {temp === 'normal' && <p className="p2h text-Secondary">실온</p>}
         </div>
-        <button className="w-1/6">
+        <button className="w-1/6" onClick={() => cartHandler(data)}>
           <Cart />
         </button>
       </div>
