@@ -1,9 +1,12 @@
 import { CartItem } from '@/types/cart';
+import { CartAction } from '@/types/context';
 
-type CartAction =
-  | { type: 'ADD_TO_CART'; item: CartItem }
-  | { type: 'UPDATE_QUANTITY'; itemName: string; newQuantity: number };
-
+/**
+ * CartAction에 따라 상태를 업데이트하는 리듀서 함수
+ * @param state - 현재 Cart 상태
+ * @param action - 수행할 Action
+ * @returns {CartItem[]} - 업데이트된 Cart 상태
+ */
 const cartReducer = (state: CartItem[], action: CartAction): CartItem[] => {
   switch (action.type) {
     case 'ADD_TO_CART':
@@ -24,5 +27,4 @@ const cartReducer = (state: CartItem[], action: CartAction): CartItem[] => {
   }
 };
 
-export type { CartAction };
 export default cartReducer;
