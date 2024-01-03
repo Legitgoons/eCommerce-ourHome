@@ -15,7 +15,8 @@
 ## 기획
 각각 Notion과 Figma를 통해서 진행
 ### 기능 명세서 [Notion](https://western-lumber-687.notion.site/7906459e6b1f4b80acbf0ed34ea64ec6?pvs=4)
-![image](https://github.com/Legitgoons/eCommerce-ourHome/assets/101088491/84871ee1-fc2e-453f-8c0d-4f2a1a82acca)
+![image](https://github.com/Legitgoons/eCommerce-ourHome/assets/101088491/64c079b0-ef20-4e8e-a9ca-c00c54855f9a)
+
 ### 화면 기획 [Figma](https://www.figma.com/file/0xezUdb3I0t8GjD7C7KDWt/%EC%95%84%EC%9B%8C%ED%99%88-%EA%B3%BC%EC%A0%9C%ED%85%8C%EC%8A%A4%ED%8A%B8-MockUp?type=design&node-id=0%3A1&mode=design&t=2T2eZ9kDGt4qRN7W-1)
 ![image](https://github.com/Legitgoons/eCommerce-ourHome/assets/101088491/6e7123b4-e673-4c2f-b8c8-ac72ca19e729)
 ## Skills
