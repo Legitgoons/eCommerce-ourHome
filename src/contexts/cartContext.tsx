@@ -1,7 +1,8 @@
 import { CartItem } from '@/types/cart';
+import { CartAction } from '@/types/context';
 import { ReactNode, createContext, useContext, useReducer } from 'react';
 
-import cartReducer, { CartAction } from './cartReducer';
+import cartReducer from './cartReducer';
 
 const CartStateContext = createContext<CartItem[] | undefined>(undefined);
 const CartDispatchContext = createContext<
