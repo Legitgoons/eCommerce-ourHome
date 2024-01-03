@@ -1,4 +1,4 @@
-import { CardTag, TempStatus } from '../List';
+import { CardTag, TempStatus } from '../list';
 
 /** ListCardData
  * @param {number} id 고유번호
@@ -7,7 +7,7 @@ import { CardTag, TempStatus } from '../List';
  * @param {string} detail 제품 상세 설명
  * @param {CardTag} tag 제품 태그 (옵션)
  * @param {number} price 제품 가격
- * @param {number} originalPrice 제품 원래 가격 (할인 전 가격, 옵션)
+ * @param {number} originalPrice 제품 원래 가격 (옵션)
  * @param {number} discountRate 할인률 (옵션)
  * @param {TempStatus} temp 제품 보관 방법
  */
