@@ -1,17 +1,4 @@
 {
-  "plugins": [
-    "prettier-plugin-tailwindcss",
-    "@trivago/prettier-plugin-sort-imports"
-  ],
-  "importOrder": [
-    "^@types/(.*)$",
-    "^@utils/(.*)$",
-    "^@pages/(.*)$",
-    "^@components/(.*)$",
-    "^[./]"
-  ],
-  "importOrderSeparation": true,
-  "importOrderSortSpecifiers": true,
   "arrowParens": "always",
   "htmlWhitespaceSensitivity": "css",
   "bracketSameLine": false,

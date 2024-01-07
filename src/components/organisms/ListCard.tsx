@@ -1,7 +1,8 @@
+import Cart from '@public/assets/image/cart.svg?react';
+
 import { useCartDispatch } from '@/contexts/cartContext';
 import { ListCardData } from '@/types/apis/listData';
 import { CartItem } from '@/types/cart';
-import Cart from '@public/assets/image/cart.svg?react';
 
 import FoodImageBox from '../atoms/FoodImageBox';
 import ListCardTag from '../atoms/ListCardTag';
@@ -24,19 +25,20 @@ export default function ListCard({ data }: ListCardProps) {
   } = data;
   const addToCart = useCartDispatch();
 
-  const convertToCartItem = (data: ListCardData): CartItem => {
+  const convertToCartItem = (itemData: ListCardData): CartItem => {
     return {
-      imgSrc: data.imgSrc,
-      name: data.name,
-      price: data.price,
-      originalPrice: data.originalPrice || undefined,
+      imgSrc: itemData.imgSrc,
+      name: itemData.name,
+      price: itemData.price,
+      originalPrice: itemData.originalPrice || undefined,
       quantity: 1,
     };
   };
 
-  const cartHandler = (data: ListCardData) => {
+  const cartHandler = (itemData: ListCardData) => {
+    // eslint-disable-next-line no-alert
     window.alert(`장바구니에 ${name}이 담겼습니다.`);
-    const cartItem = convertToCartItem(data);
+    const cartItem = convertToCartItem(itemData);
     addToCart({ type: 'ADD_TO_CART', item: cartItem });
   };
 
@@ -60,7 +62,12 @@ export default function ListCard({ data }: ListCardProps) {
           {temp === 'freeze' && <p className="p2h text-Darkblue">냉동</p>}
           {temp === 'normal' && <p className="p2h text-Secondary">실온</p>}
         </div>
-        <button className="w-1/6" onClick={() => cartHandler(data)}>
+        <button
+          type="button"
+          className="w-1/6"
+          onClick={() => cartHandler(data)}
+          aria-label="cartHandler"
+        >
           <Cart />
         </button>
       </div>

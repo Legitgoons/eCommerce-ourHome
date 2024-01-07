@@ -29,7 +29,15 @@
     "sourceType": "module"
   },
   "plugins": ["@typescript-eslint", "prettier", "import"],
-  "ignorePatterns": ["node_modules/"],
+  "ignorePatterns": ["node_modules/", "vite.config.ts"],
+  "settings": {
+    "import/resolver": {
+      "alias": {
+        "map": [["@", "./src"]],
+        "extensions": [".ts", ".tsx", ".js", ".jsx", ".json"]
+      }
+    }
+  },
   "rules": {
     "react/no-unused-prop-types": "off",
     "linebreak-style": 0,
@@ -39,6 +47,7 @@
         "endOfLine": "auto"
       }
     ],
+    "import/prefer-default-export": "off",
     "react/react-in-jsx-scope": "off",
     "react/jsx-props-no-spreading": "off",
     "no-empty-pattern": "off",
@@ -63,6 +72,34 @@
         "json": "never"
       }
     ],
-    "import/order": ["error"]
+    "import/order": [
+      "error",
+      {
+        "groups": ["builtin", "external", "parent", "sibling", "index"],
+        "pathGroups": [
+          {
+            "pattern": "react",
+            "group": "external",
+            "position": "before"
+          },
+          {
+            "pattern": "react-router-dom",
+            "group": "external",
+            "position": "before"
+          },
+          {
+            "pattern": "@/**/*",
+            "group": "parent",
+            "position": "before"
+          }
+        ],
+        "pathGroupsExcludedImportTypes": ["builtin"],
+        "newlines-between": "always",
+        "alphabetize": {
+          "order": "asc",
+          "caseInsensitive": true
+        }
+      }
+    ]
   }
 }

@@ -1,6 +1,7 @@
+import { ReactNode, createContext, useContext, useReducer } from 'react';
+
 import { CartItem } from '@/types/cart';
 import { CartAction } from '@/types/context';
-import { ReactNode, createContext, useContext, useReducer } from 'react';
 
 import cartReducer from './cartReducer';
 
@@ -13,7 +14,7 @@ interface CartProviderProps {
   children: ReactNode;
 }
 
-export const CartProvider = ({ children }: CartProviderProps) => {
+export function CartProvider({ children }: CartProviderProps) {
   const [cart, dispatch] = useReducer(cartReducer, []);
 
   return (
@@ -23,7 +24,7 @@ export const CartProvider = ({ children }: CartProviderProps) => {
       </CartStateContext.Provider>
     </CartDispatchContext.Provider>
   );
-};
+}
 
 export const useCartState = () => {
   const context = useContext(CartStateContext);
