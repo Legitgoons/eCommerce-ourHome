@@ -9,8 +9,8 @@ export default function ListPage() {
 
   useEffect(() => {
     const getData = async () => {
-      const data = await fetchListData();
-      setData(data);
+      const newData = await fetchListData();
+      setData(newData);
     };
 
     getData();
