@@ -1,6 +1,7 @@
+import { ReactNode, createContext, useContext, useReducer } from 'react';
+
 import { CartItem } from '@/types/cart';
 import { CartAction } from '@/types/context';
-import { ReactNode, createContext, useContext, useReducer } from 'react';
 
 import cartReducer from './cartReducer';
 

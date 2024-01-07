@@ -1,7 +1,8 @@
+import Cart from '@public/assets/image/cart.svg?react';
+
 import { useCartDispatch } from '@/contexts/cartContext';
 import { ListCardData } from '@/types/apis/listData';
 import { CartItem } from '@/types/cart';
-import Cart from '@public/assets/image/cart.svg?react';
 
 import FoodImageBox from '../atoms/FoodImageBox';
 import ListCardTag from '../atoms/ListCardTag';

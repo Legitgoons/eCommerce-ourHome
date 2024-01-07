@@ -1,6 +1,7 @@
+import { useState } from 'react';
+
 import { useCartDispatch } from '@/contexts/cartContext';
 import { CartItem } from '@/types/cart';
-import { useState } from 'react';
 
 import FoodImageBox from '../atoms/FoodImageBox';
 import CartBoxPricing from '../molecules/CartBoxPricing';

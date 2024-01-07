@@ -1,5 +1,6 @@
-import { useCartState } from '@/contexts/cartContext';
 import { useEffect, useState } from 'react';
+
+import { useCartState } from '@/contexts/cartContext';
 
 import CartBoxHeader from '../molecules/CartBoxHeader';
 import CartBox from '../organisms/CartBox';
@@ -10,7 +11,6 @@ export default function CartTemplate() {
   const cart = useCartState();
   const [totalPrice, setTotalPrice] = useState(0);
   const [shippingFee, setShippingFee] = useState(3000);
-
   /**
    * Cart의 상태가 변하면 useEffect를 사용해 다시 총 금액을 계산
    * 새로 계산된 값을 기반으로 배송비 설정
