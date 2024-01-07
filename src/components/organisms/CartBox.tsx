@@ -15,17 +15,24 @@ export default function CartBox({ data }: CartBoxProps) {
   const { imgSrc, name, price, originalPrice, quantity } = data;
   const [itemQuantity, setItemQuantity] = useState<number>(quantity);
   const dispatch = useCartDispatch();
+  const increase = (num: number) => {
+    return num + 1;
+  };
+
+  const decrease = (num: number) => {
+    return num - 1;
+  };
 
   const decreaseQuantity = () => {
     if (itemQuantity > 1) {
-      const newQuantity = itemQuantity - 1;
+      const newQuantity = decrease(itemQuantity);
       setItemQuantity(newQuantity);
       dispatch({ type: 'UPDATE_QUANTITY', itemName: name, newQuantity });
     }
   };
 
   const increaseQuantity = () => {
-    const newQuantity = itemQuantity + 1;
+    const newQuantity = increase(itemQuantity);
     setItemQuantity(newQuantity);
     dispatch({ type: 'UPDATE_QUANTITY', itemName: name, newQuantity });
   };
