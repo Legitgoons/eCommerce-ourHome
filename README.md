@@ -11,7 +11,7 @@
 ### List(Mobile)
 ![image](https://github.com/Legitgoons/eCommerce-ourHome/assets/101088491/4b28c5f3-a609-4bde-b320-50ec697d87cd)
 ### Cart
-![image](https://github.com/Legitgoons/eCommerce-ourHome/assets/101088491/8389a25c-dfbc-49b4-8385-c98f6b99ea4e)
+![image](https://github.com/Legitgoons/eCommerce-ourHome/assets/101088491/594d02d9-ec32-4284-8456-44846c05779c)
 
 ## 기획
 각각 Notion과 Figma를 통해서 진행
@@ -87,4 +87,13 @@ type : Title
 {type}-{word}
 
 ## Challenges
-[Notion](https://western-lumber-687.notion.site/Challenges-f26279a6ff9243bfbc73c95cd88eb0ff?pvs=4)에 작성하였습니다.
+#### 액션, 계산 함수 분리
+- CartBox에서 계산함수 increase와 decrease를 분리했습니다.
+- CartTemplate에서 계산함수 calculateTotalPrice와 calculateShippingFee를 분리했습니다.
+- 액션, 계산 분리에 대한 자세한 설명은 [블로그](https://cksxkr5193.tistory.com/30)를 참조 부탁드립니다.
+#### 수량 변경 문제 해결
+![image](https://github.com/Legitgoons/eCommerce-ourHome/assets/101088491/7d7829c2-bda2-41fe-8cf5-ff928127354c)
+- 아워홈 mall의 장바구니에서 수량이 1인 제품의 마이너스 버튼을 누르면 오류 발생 alert가 출력
+- 이후 동일 제품 장바구니에 담아도 장바구니 페이지 이동시 0으로 변경되는 이슈가 있습니다.
+- 이를 해결하기 위해, CartQuantityController 컴포넌트에서 수량이 1일 경우 마이너스 버튼을 비활성화하고 디자인이 변경되도록 했습니다.
+- 또한 CartBox 컴포넌트의 decreaseQuantity 함수도 수량이 1보다 클 경우에만 실행되도록 구현했습니다.
