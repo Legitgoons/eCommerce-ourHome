@@ -1,33 +1,22 @@
-import { useEffect, useState } from 'react';
-
 import { useCartState } from '@/contexts/cartContext';
+import { CartItem } from '@/types/cart';
 
 import CartBoxHeader from '../molecules/CartBoxHeader';
 import CartBox from '../organisms/CartBox';
 import CartPaymentPricing from '../organisms/CartPaymentPricing';
 import Header from '../organisms/Header';
 
+const calculateTotalPrice = (cart: CartItem[]) =>
+  cart.reduce((total, item) => total + item.price * item.quantity, 0);
+
+const calculateShippingFee = (totalPrice: number) =>
+  totalPrice >= 30000 || totalPrice === 0 ? 0 : 3000;
+
 export default function CartTemplate() {
   const cart = useCartState();
-  const [totalPrice, setTotalPrice] = useState(0);
-  const [shippingFee, setShippingFee] = useState(3000);
-  /**
-   * Cart의 상태가 변하면 useEffect를 사용해 다시 총 금액을 계산
-   * 새로 계산된 값을 기반으로 배송비 설정
-   */
-  useEffect(() => {
-    const newTotalPrice = cart.reduce((total, item) => {
-      return total + item.price * item.quantity;
-    }, 0);
-    setTotalPrice(newTotalPrice);
 
-    if (newTotalPrice >= 30000 || newTotalPrice === 0) {
-      setShippingFee(0);
-    } else {
-      setShippingFee(3000);
-    }
-  }, [cart]);
-
+  const totalPrice = calculateTotalPrice(cart);
+  const shippingFee = calculateShippingFee(totalPrice);
   const totalAmount = totalPrice + shippingFee;
 
   return (

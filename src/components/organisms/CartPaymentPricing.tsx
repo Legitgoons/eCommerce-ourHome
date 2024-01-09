@@ -17,7 +17,7 @@ export default function CartPaymentPricing({
       <p className="t2 text-Secondary">+</p>
       <CartTotalPriceing price={shippingFee} type="ShippingFee" />
       <p className="t2 text-Secondary">=</p>
-      <CartTotalPriceing price={totalAmount} type="TotalAmount" />
+      <CartTotalPriceing price={totalAmount} type="PaymentAmount" />
     </div>
   );
 }
