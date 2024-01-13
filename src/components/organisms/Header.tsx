@@ -14,7 +14,7 @@ interface HeaderProps {
 
 export default function Header({ currentPage }: HeaderProps) {
   return (
-    <header className="w-full h-16 md:h-28 flex justify-between border-b-2">
+    <header className="flex h-16 w-full justify-between border-b-2 md:h-28">
       <HeaderIcon layout="mx-6 my-2 md:mx-12 md:my-3">
         <Logo />
       </HeaderIcon>

@@ -8,7 +8,7 @@ export default function CartBoxPricing({
   originalPrice,
 }: CartBoxPricingProps) {
   return (
-    <div className="flex flex-col w-1/3">
+    <div className="flex w-1/3 flex-col">
       <p className="h2h">{price.toLocaleString()}원</p>
       {originalPrice && (
         <s className="p1h text-Secondary">{originalPrice.toLocaleString()}원</s>

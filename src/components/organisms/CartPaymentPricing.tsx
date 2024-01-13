@@ -12,7 +12,7 @@ export default function CartPaymentPricing({
   totalAmount,
 }: CartPaymentPricingProps) {
   return (
-    <div className="w-full h-28 flex justify-around items-center bg-Tertiary">
+    <div className="flex h-28 w-full items-center justify-around bg-Tertiary">
       <CartTotalPriceing price={totalPrice} type="TotalAmount" />
       <p className="t2 text-Secondary">+</p>
       <CartTotalPriceing price={shippingFee} type="ShippingFee" />
