@@ -7,6 +7,6 @@ interface HeaderIconProps {
 
 export default function HeaderIcon({ children, layout }: HeaderIconProps) {
   return (
-    <div className={`${layout} w-12 md:w-20 flex items-center`}>{children}</div>
+    <div className={`${layout} flex w-12 items-center md:w-20`}>{children}</div>
   );
 }

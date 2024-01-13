@@ -12,7 +12,7 @@ export default function FoodImageBox({
   const boxSize = size === 'lg' ? 'w-72 h-72' : 'w-32 h-32';
 
   return (
-    <div className={`${boxSize} flex item-center justify-center border-2`}>
+    <div className={`${boxSize} flex items-center justify-center border-2`}>
       <img src={src} alt={name} />
     </div>
   );

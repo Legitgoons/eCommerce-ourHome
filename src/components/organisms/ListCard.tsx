@@ -43,16 +43,16 @@ export default function ListCard({ data }: ListCardProps) {
   };
 
   return (
-    <article className="w-72 flex flex-col gap-y-1">
+    <article className="flex w-72 flex-col gap-y-1">
       <FoodImageBox src={imgSrc} name={name} />
       <div className="flex items-start">
-        <div className="w-5/6 flex flex-col gap-y-2 items-start text-start">
+        <div className="flex w-5/6 flex-col items-start gap-y-2 text-start">
           {tag === 'best' && <ListCardTag bgColor="bg-Red">베스트</ListCardTag>}
           {tag === 'new' && (
             <ListCardTag bgColor="bg-Orange">신상품</ListCardTag>
           )}
-          <h3 className="w-full p1s">{name}</h3>
-          <p className="w-full p2s text-Secondary">{detail}</p>
+          <h3 className="p1s w-full">{name}</h3>
+          <p className="p2s w-full text-Secondary">{detail}</p>
           <ListCardPricing
             price={price}
             orginalPrice={originalPrice}

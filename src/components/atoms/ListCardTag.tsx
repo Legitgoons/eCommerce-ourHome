@@ -10,7 +10,7 @@ interface ListCardTagProps {
 export default function ListCardTag({ bgColor, children }: ListCardTagProps) {
   return (
     <span
-      className={`${bgColor} w-16 h-6 flex justify-center items-center p2s text-white rounded-lg`}
+      className={`${bgColor} p2s flex h-6 w-16 items-center justify-center rounded-lg text-white`}
     >
       {children}
     </span>

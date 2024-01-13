@@ -9,15 +9,15 @@ interface ListTemplateProps {
 
 export default function ListTemplate({ data }: ListTemplateProps) {
   return (
-    <div className="w-screen h-screen flex flex-col items-center overflow-auto">
+    <div className="flex h-screen w-screen flex-col items-center overflow-auto">
       <Header currentPage="list" />
       <ol className="container flex flex-wrap justify-center">
         {data.map((item, index) => (
           <li
             key={item.id}
-            className="w-80 h-500 flex items-start justify-center py-8"
+            className="flex h-500 w-80 items-start justify-center py-8"
           >
-            <div className="w-72 flex flex-col items-start">
+            <div className="flex w-72 flex-col items-start">
               <span className="t2">{String(index + 1).padStart(2, '0')}</span>
               <ListCard data={item} />
             </div>

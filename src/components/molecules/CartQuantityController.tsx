@@ -12,7 +12,7 @@ export default function CartQuantityController({
   const disabledStyle = quantity === 1 ? 'bg-Secondary' : '';
 
   return (
-    <div className="w-32 h-8 flex justify-between h2h">
+    <div className="h2h flex h-8 w-32 justify-between">
       <button
         type="button"
         onClick={onDecrease}
@@ -21,7 +21,7 @@ export default function CartQuantityController({
       >
         -
       </button>
-      <p className="w-1/2 flex items-center justify-center border-y-2">
+      <p className="flex w-1/2 items-center justify-center border-y-2">
         {quantity}
       </p>
       <button type="button" onClick={onIncrease} className="w-1/4 border-2">
