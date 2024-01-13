@@ -9,7 +9,8 @@
     "airbnb-typescript",
     "airbnb/hooks",
     "plugin:prettier/recommended",
-    "prettier"
+    "prettier",
+    "plugin:tailwindcss/recommended"
   ],
   "overrides": [
     {
