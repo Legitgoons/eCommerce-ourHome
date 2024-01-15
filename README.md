@@ -88,11 +88,20 @@ type : Title
 {type}-{word}
 
 ## Challenges
-#### 액션, 계산 함수 분리
+### LCP 개선
+#### Before
+![image](https://github.com/Legitgoons/eCommerce-ourHome/assets/101088491/47550c2f-ae48-4551-9f6d-f201e0c7cbc6)
+#### After
+![image](https://github.com/Legitgoons/eCommerce-ourHome/assets/101088491/d5b3cc13-dca7-4549-8902-c42635029e61)
+- 쇼핑몰 서비스 특성상 수많은 이미지를 불러와서 랜더링해야 합니다. 하지만 LCP에 지나치게 오랜 시간이 소요되는 이슈가 있었습니다.
+- 이를 해결하기 위해 font를 호환성이 뛰어나지만 용량이 큰 ttf형식에서 ttf 대비 용량이 1/3인 woff2 형식으로 변경하였습니다.
+- img에 사용자가 해당 상품의 위치로 스크롤을 이동할 때, 이미지를 불러오는 방식인 lazy loading을 설정하였습니다. 
+- LCP 개선에 대한 자세한 설명은 [블로그](https://cksxkr5193.tistory.com/35)를 참조 부탁드립니다.
+### 액션, 계산 함수 분리
 - CartBox에서 계산함수 increase와 decrease를 분리했습니다.
 - CartTemplate에서 계산함수 calculateTotalPrice와 calculateShippingFee를 분리했습니다.
 - 액션, 계산 분리에 대한 자세한 설명은 [블로그](https://cksxkr5193.tistory.com/30)를 참조 부탁드립니다.
-#### 수량 변경 문제 해결
+### 수량 변경 이슈
 ![image](https://github.com/Legitgoons/eCommerce-ourHome/assets/101088491/7d7829c2-bda2-41fe-8cf5-ff928127354c)
 - 아워홈 mall의 장바구니에서 수량이 1인 제품의 마이너스 버튼을 누르면 오류 발생 alert가 출력
 - 이후 동일 제품 장바구니에 담아도 장바구니 페이지 이동시 0으로 변경되는 이슈가 있습니다.
